@@ -1,2 +1,14 @@
-@import './common';
-@import './example';
+@import './base/common';
+@import './base/container';
+
+@import './layout/01_header';
+@import './layout/02_hero';
+@import './layout/03_coctails';
+@import './layout/04_footer';
+@import './layout/05_modal';
+@import './layout/06_error';
+
+@import './utils/mixins';
+@import './utils/variables';
+@import './utils/placeholders';
+@import './utils/visually-hidden';
