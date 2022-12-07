@@ -1,0 +1,15 @@
+{{#each this}}
+    <li class="coctails__item">
+        <img src="{{strDrinkThumb}}" alt="{{strDrink}}">
+        <h3 class="coctails__item-title">
+            {{strDrink}}
+        </h3>
+        <button class="coctails__item" type="button">Learn more</button>
+        <button class="coctails__item" type="button">
+            Add to
+            <svg>
+                <use src="../images/sprite.svg#icon-heart-stroked"></use>
+            </svg>
+        </button>
+    </li>
+{{/each}}
