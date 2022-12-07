@@ -5,9 +5,7 @@
 li {
   list-style-type: none;
 }
-.container {
-  margin-right: 0;
-}
+
 .section-hero {
   background-color: var(--primary-bg-color);
   padding-top: 97px;
@@ -16,13 +14,13 @@ li {
 
 .hero-content {
   @media screen and (min-width: 768px) {
-    // display: flex;
-    // text-align: start;
-    // flex-direction: column;
-    // place-content: flex-start;
-    // align-items: center;
-    // display: flex;
-    // align-items: flex-start;
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    place-content: flex-start;
+    align-items: center;
+    display: flex;
+    align-items: flex-start;
   }
 }
 
@@ -91,6 +89,7 @@ li {
     justify-content: center;
     place-items: center;
     margin-top: 40px;
+    padding-left: 0;
   }
 
   @media screen and (min-width: 1280px) {
@@ -154,6 +153,16 @@ li {
     display: none;
   }
 }
+.select {
+  @media screen and (min-width: 320px) {
+     width: 93px;
+  height: 34px;
+  border: 1px solid var(--accent-grapefruit);
+  border-radius: 4px;
+  cursor: pointer;
+  padding-top: 6px;
+  }
+}
 
 .app {
   @media screen and (min-width: 320px) {
@@ -168,12 +177,13 @@ li {
 
 .select__dropdown {
   @media screen and (min-width: 320px) {
-    border: 1px solid #fd5103;
+    border: 1px solid var(--accent-grapefruit);
     border-radius: 4px;
     width: 93px;
     max-height: 84px;
     margin: 0 auto;
     overflow-y: auto;
+    z-index: 10000;
   }
 }
 
@@ -205,7 +215,7 @@ li {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.3;
-  color: #fd5103;
+  color: var(--accent-grapefruit);
   padding: 6px 0 6px 10px;
 }
 
@@ -220,12 +230,12 @@ li {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: #5f6775;
+  color: var(--accent-gray);
   }
   @media screen and (min-width: 768px){
      width: 24px;
     height: 25px;
-    color: #5f6775;
+    color: var(--accent-gray);
     justify-content: center;
     align-items: center;
     line-height: 1.5;
@@ -246,7 +256,7 @@ li {
 
 .hero-item:hover,
 .hero-item:focus {
-  color: #fd5103;
+  color: var(--accent-grapefruit);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -255,14 +265,20 @@ li {
 }
 
 .hero__icon {
-  fill: #fd5103;
+  fill: var(--accent-grapefruit);
   width: 24px;
-
   position: absolute;
-  top: 7px;
+  top: 0px;
   left: 40px;
 }
 
 .change-bgcolor {
   background-color: var(--accent-grapefruit);
+}
+
+.change-color {
+  color: var(--primary-bg-color);
+}
+.change-icon-color {
+  fill: var(--primary-bg-color);
 }
