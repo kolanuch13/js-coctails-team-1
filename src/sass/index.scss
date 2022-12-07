@@ -5,7 +5,9 @@
 @import './layout/02_hero';
 @import './layout/03_coctails';
 @import './layout/04_footer';
-@import './layout/05_modal';
+@import './layout/_05_1_modal_ingredients';
+@import './layout/_05_2_modal_cocktails';
+@import './layout/_05_3_backdrop';
 @import './layout/06_error';
 
 @import './utils/mixins';
