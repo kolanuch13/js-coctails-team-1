@@ -1,6 +1,20 @@
 li {
   list-style-type: none;
 }
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .slogan {
   font-family: 'Poppins';
   font-style: normal;
@@ -12,12 +26,11 @@ li {
     width: 300px;
     margin-left: 20px;
     margin-right: 0px;
-    margin-bottom: 28px; 
+    margin-bottom: 28px;
     font-size: 22px;
   }
 
-  @media screen and (min-width: 768px){
-
+  @media screen and (min-width: 768px) {
     font-size: 26px;
     margin-right: 11px;
     width: 336px;
@@ -26,39 +39,30 @@ li {
   }
 }
 
-.wrap{
-    @media screen and (min-width: 768px){
-       display: flex;
-       padding-top: 90px;
-    }
-
+.wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding-top: 90px;
+  }
 }
 
-.wrap-2{
-    @media screen and (min-width: 768px){
-       flex-direction: column;
-     }
+.wrap-2 {
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
 }
 
-.alphabet{
-
-    @media screen and (min-width: 320px){
-        display: none;
-    }
-    @media screen and (min-width: 768px){
-        display: flex;
-
-
-
-    }
-
+.alphabet {
+  @media screen and (min-width: 320px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    width: 324px;
+    flex-wrap: wrap;
+    margin-right: 1px;
+  }
 }
-
-
-
-
-
-
 
 .image_hero {
   @media screen and (min-width: 320px) {
@@ -83,39 +87,70 @@ li {
   }
 }
 
+.dropdown {
+  @media screen and (min-width: 320px) {
+    width: 93px;
+    height: 34px;
+    border: 1px solid var(--accent-grapefruit);
+    border-radius: 4px;
+    position: relative;
+    margin: 0 auto;
+  }
 
-.dropdown{
-    @media screen and (min-width: 320px){
-        width: 93px;
-        height: 34px;
-        border: 1px solid #FD5103;
-        border-radius: 4px;
-        position: relative;
-        margin: 0 auto;
-    }
-
-    @media screen and (min-width: 768px){
-        display: none;
-    }
-
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
-.textBox{
-    @media screen and (min-width: 320px){
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        border: none;
-        padding-left: 10px;
-        padding-top: 6px;
-        padding-bottom: 6px;
-    }
+.dropdown::before {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  z-index: 100000;
+  width: 8px;
+  height: 8px;
+  // border: 2px solid black;
+  border-bottom: 2px solid var(--accent-grapefruit);
+  border-left: 2px solid var(--accent-grapefruit);
+  transform: rotate(-45deg);
+  transition: 0, 5s;
+  pointer-events: none;
+}
+.dropdown:focus-visible::before{
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+}
 
-    @media screen and (min-width: 768px){
-        display: none;
-    }
+.textBox {
+  @media screen and (min-width: 320px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
 
+.textBox::placeholder {
+  @media screen and (min-width: 320px) {
+    color: var(--accent-grapefruit);
+    opacity: 1;
+  }
+}
+
+.textBox:focus-within{
+  background-color: var(--accent-grapefruit);
+}
+
+.textBox:focus::placeholder{
+  color:white;
 }
