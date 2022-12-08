@@ -1,8 +1,6 @@
 let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelector('.dn');
 
-console.log(darkModeToggle);
-
 const enabledDarkMode = () => {
     document.body.classList.add('dark-mode');
     localStorage.setItem('darkMode', 'enabled');
