@@ -1,15 +1,16 @@
 {{#each this}}
     <li class="coctails__item">
-        <img src="{{strDrinkThumb}}" alt="{{strDrink}}">
+        <img class="coctails__item-image" src="{{strDrinkThumb}}" alt="{{strDrink}}">
         <h3 class="coctails__item-title">
             {{strDrink}}
         </h3>
-        <button class="coctails__item" type="button">Learn more</button>
-        <button class="coctails__item" type="button">
-            Add to
-            <svg>
-                <use src="../images/sprite.svg#icon-heart-stroked"></use>
-            </svg>
-        </button>
+        <div class="coctails__item-button-wrapper">
+            <button class="coctails__item-button" type="button">Learn more</button>
+            <button class="coctails__item-button" type="button">Add to
+                <svg class="icon icon-heart-stroked" width="21px" height="19px">
+                    <use xlink:href="./images/sprite.svg#icon-heart-stroked"></use>
+                </svg>
+            </button>
+        </div>
     </li>
 {{/each}}
