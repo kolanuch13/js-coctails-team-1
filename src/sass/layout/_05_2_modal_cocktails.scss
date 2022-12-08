@@ -1,19 +1,9 @@
-// li {
-//   list-style-type: '✶';
-//   padding-inline-start: 1ch;
-// }
-
-// li:hover {
-//   color: olivedrab;
-// }
-
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 320px;
-  // min-height: 609px;
+  width: 320px;
   background-color: #fcfcfc;
   padding: 20px;
 
@@ -34,30 +24,205 @@
 
   &__close-btn-icon {
     fill: var(--text-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     .modal__close-btn:hover &,
     .modal__close-btn:focus & {
       fill: var(--accent-auxiliary-orange);
     }
   }
+  &__title {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.1875;
+    color: #202025;
+    margin-top: 12px;
+  }
+
+  &__bottom-btn {
+    display: block;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    background: #fe7031;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 12px 24px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus {
+      background: #fe7031;
+      color: #ffffff;
+    }
+    &:hover {
+      background: #f5f5f5;
+      color: #fd5103;
+    }
+    &:active {
+      background: #fd5103;
+      color: #ffffff;
+    }
+  }
+}
+
+.ingredients-list {
+  &__item {
+    list-style-type: '✶';
+    padding-inline-start: 1ch;
+
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.62;
+    color: #5f6775;
+    margin-left: 12px;
+  }
+  &__link {
+    color: #5f6775;
+  }
+}
+
+.cocktail-list {
+  &__item {
+    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: #fd5103;
+    }
+  }
+  &__link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .ingredients-list__item:hover &,
+    .ingredients-list__item:hover & {
+      color: #fd5103;
+    }
+  }
+}
+
+.modal-cocktails {
+  &__img {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+  &__bottom-btn {
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+.instractions {
+  font-family: 'Poppins';
+  font-size: 16px;
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.62;
+    text-transform: uppercase;
+    color: #202025;
+    margin: 20px 0;
+  }
+  &__descr {
+    font-weight: 400;
+    line-height: 1.75;
+    color: #5f6775;
+    margin-bottom: 32px;
+  }
+}
+
+.ingredients {
+  &__title {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #000917;
+    margin-top: 22px;
+  }
+  &__text {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #202025;
+    margin: 8px 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .modal {
-    width: 600px;
+    width: 700px;
     padding: 28px;
 
     &__close-btn {
       top: 12px;
       right: 12px;
     }
+    &__bottom-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      margin: 0;
+    }
+  }
+  .modal-cocktails {
+    &__container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &__title {
+      order: 1;
+      color: #000917;
+      margin-left: 292px;
+    }
+    &__img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 288px;
+      height: 320px;
+      // opacity: 0.2;
+    }
+  }
+  .instractions {
+    &__title {
+      color: #000917;
+      margin-top: 52px;
+      margin-bottom: 24px;
+    }
+    &__descr {
+      margin-bottom: 88px;
+    }
+  }
+
+  .ingredients {
+    margin-left: 292px;
+    &__title {
+      color: #202025;
+      margin-top: 28px;
+    }
   }
 }
 
 // DESKTOP
-@media screen and (min-width: 1200px) {
-  .modal {
+@media screen and (min-width: 1280px) {
+  .modal-cocktails {
     min-width: 822px;
+    &__title {
+      color: #202025;
+    }
+  }
+
+  .instractions {
+    &__title {
+      color: #202025;
+    }
   }
 }
