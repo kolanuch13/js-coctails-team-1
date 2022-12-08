@@ -1,5 +1,4 @@
-import mobileMenu from "./js/mobile-menu"
-import modalWin from "./js/modal"
 
-mobileMenu();
-modalWin();
+import pagination from "./js/create_markup"
+
+pagination();

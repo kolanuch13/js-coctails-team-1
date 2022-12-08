@@ -1,4 +1,4 @@
-export default modalWin = (() => {
+modalWin = (() => {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-win-open]'),
     closeModalBtn: document.querySelector('[data-modal-win-close]'),
