@@ -1,8 +1,8 @@
-(() => {
+export default modalWin = (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
+    openModalBtn: document.querySelector('[data-modal-win-open]'),
+    closeModalBtn: document.querySelector('[data-modal-win-close]'),
+    modal: document.querySelector('[data-modal-win]'),
     btn: document.querySelector('.modal__bottom-btn'),
   };
 
@@ -17,8 +17,8 @@
       refs.btn.textContent = 'Add to favorite';
     }
   }
-
+  
   function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
+    refs.modal.classList.toggle('is-win-hidden');
   }
 })();

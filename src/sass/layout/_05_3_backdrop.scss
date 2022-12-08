@@ -1,10 +1,10 @@
-.backdrop.is-hidden {
+.backdrop-win.is-win-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop {
+.backdrop-win {
   position: fixed;
   top: 0;
   left: 0;
