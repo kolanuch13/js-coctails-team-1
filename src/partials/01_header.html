@@ -1,0 +1,81 @@
+<header class="page-header">
+  <div class="container page-header__container">
+    <nav class="page-navigation">
+      <a href="./index.html" class="logo">
+      <img src="./images/logo.svg" alt="cocktails">
+      </a>
+      <ul class="menu list">
+        <li class="menu__item">
+          <a class="menu__link link" href="#home">Home</a>
+        </li>
+        <li class="menu__item">
+          <!-- <a class="menu__link link" href="#Favourite">Favourite</a> -->
+          <select class="menu-option">
+            <option value="1">Favourite</option>
+            <option value="2">Favourite cocktails</option>
+            <option value="3">Favourite ingredients</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="search-container">
+      <form class="search-form" id="search-form">
+         <button type="submit" class="search-button">
+          <span class="material-icons">
+              <svg class="search-magni-glass" width="24" height="24">
+                 <use xlink:href="./images/sprite.svg#icon-search"></use>
+              </svg>
+          </span>
+        </button>
+        <input class="search-input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder=" Search"
+        />
+       
+      </form>
+    </div>
+    
+
+    
+    <div class="toggleWrapper">
+        <p class="Light">Light</p>
+  <input type="checkbox" class="dn" id="dn"/>
+    <label for="dn" class="toggle">
+    <span class="toggle__handler">
+  </label>
+  <p class="Dark">Dark</p>
+</div>
+
+    <button type="button" class="mobile-menu-btn" data-menu-open>
+      <svg class="mobile-menu-btn__icon" width="30" height="16">
+        <use xlink:href="./images/sprite.svg#icon-menu"></use>
+      </svg>
+    </button>
+
+    <div class="mobile-menu" data-menu>
+      <div class="container mobile-menu__container">
+        <button type="button" class="mobile-menu__close-btn" data-menu-close>
+          <svg class="mobile-menu__close-icon" width="24" height="24">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu__list list">
+            
+          <li>
+            <a href="./index.html" class="mobile-menu__link link">Home</a>
+          </li>
+          <li>
+           <select class="menu-option">
+    <option value="1">Favourite</option>
+    <option value="2">Favourite cocktails</option>
+    <option value="3">Favourite ingredients</option>
+  </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
