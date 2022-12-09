@@ -1,0 +1,39 @@
+{{#each this}}
+<div class="modal modal-cocktails">
+    <button type="button" class="modal__close-btn" data-modal-win-close>
+        <svg class="modal__close-btn-icon" width="32" height="32">
+            <use href="./images/sprite.svg#icon-clarity_close-line"></use>
+        </svg>
+    </button>
+    <div class="modal-cocktails__container">
+        <h2 class="modal-cocktails__title modal__title">{{strDrink}}</h2>
+        <div class="instractions">
+            <h3 class="instractions__title">Instractions:</h3>
+            <p class="instractions__descr">{{strInstructions}}</p>
+        </div>
+        <img class="modal-cocktails__img" src="{{strDrinkThumb}}" alt="{{strDrink}}">
+        <div class="ingredients">
+            <h3 class="ingredients__title">INGREDIENTS</h3>
+            <p class="ingredients__text">Per cocktail</p>
+            <ul class="ingredients-list cocktail-list">
+                <li class="ingredients-list__item cocktail-list__item">
+                    <a href="" class="ingredients-list__link cocktail-list__link link">{{strIngredient1}}</a>
+                </li>
+                <li class="ingredients-list__item cocktail-list__item">
+                    <a href="" class="ingredients-list__link cocktail-list__link link">{{strIngredient2}}</a>
+                </li>
+                <li class="ingredients-list__item cocktail-list__item">
+                    <a href="" class="ingredients-list__link cocktail-list__link link">{{strIngredient3}}</a>
+                </li>
+                <li class="ingredients-list__item cocktail-list__item">
+                    <a href="" class="ingredients-list__link cocktail-list__link link">{{strIngredient4}}</a>
+                </li>
+                <li class="ingredients-list__item cocktail-list__item">
+                    <a href="" class="ingredients-list__link cocktail-list__link link">{{strIngredient5}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button type="button" class="modal__bottom-btn modal-cocktails__bottom-btn">Add to favorite</button>
+</div>
+{{/each}}

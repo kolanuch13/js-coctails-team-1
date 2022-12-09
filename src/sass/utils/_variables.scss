@@ -1,15 +1,17 @@
 :root {
-    --base-font: 'Roboto', sans-serif;
-    --basic-font-size: 14px;
-    --white-color: #FCFCFC;
-    --accent-grapefruit: #FD5103;
-    --accent-auxiliary-orange: #FE7031;
-    --accent-gray: #5F6775;
-    --text-color: #202025;
+  --base-font: 'Roboto', sans-serif;
+  --basic-font-size: 14px;
+  --white-color: #fcfcfc;
+  --accent-grapefruit: #fd5103;
+  --accent-auxiliary-orange: #fe7031;
+  --accent-gray: #5f6775;
+  --text-color: #202025;
+
+  --accent-gray-modal: #5f6775;
 }
 
 .dark-mode {
-    --white-color: #202025;
-    --text-color: #FCFCFC;
+  --white-color: #202025;
+  --text-color: #fcfcfc;
+  --accent-gray-modal: #bdbdbd;
 }
-

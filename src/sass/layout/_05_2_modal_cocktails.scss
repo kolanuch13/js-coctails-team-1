@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 320px;
-  background-color: #fcfcfc;
+  background-color: var(--white-color);
   padding: 20px;
 
   &__close-btn {
@@ -32,38 +32,38 @@
     }
   }
   &__title {
-    font-family: 'Roboto';
+    font-family: var(--base-font);
     font-weight: 900;
     font-size: 32px;
     line-height: 1.1875;
-    color: #202025;
+    color: var(--text-color);
     margin-top: 12px;
   }
 
   &__bottom-btn {
     display: block;
-    font-family: 'Roboto';
+    font-family: var(--base-font);
     font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #ffffff;
-    background: #fe7031;
+    background: var(--accent-auxiliary-orange);
     border: none;
     border-radius: 4px;
     cursor: pointer;
     padding: 12px 24px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:focus {
-      background: #fe7031;
+      background: var(--accent-auxiliary-orange);
       color: #ffffff;
     }
     &:hover {
       background: #f5f5f5;
-      color: #fd5103;
+      color: var(--accent-grapefruit);
     }
     &:active {
-      background: #fd5103;
+      background: var(--accent-grapefruit);
       color: #ffffff;
     }
   }
@@ -78,11 +78,11 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.62;
-    color: #5f6775;
+    color: var(--accent-gray-modal);
     margin-left: 12px;
   }
   &__link {
-    color: #5f6775;
+    color: var(--accent-gray-modal);
   }
 }
 
@@ -92,7 +92,7 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-      color: #fd5103;
+      color: var(--accent-grapefruit);
     }
   }
   &__link {
@@ -100,7 +100,7 @@
 
     .ingredients-list__item:hover &,
     .ingredients-list__item:hover & {
-      color: #fd5103;
+      color: var(--accent-grapefruit);
     }
   }
 }
@@ -125,13 +125,13 @@
     font-weight: 600;
     line-height: 1.62;
     text-transform: uppercase;
-    color: #202025;
+    color: var(--text-color);
     margin: 20px 0;
   }
   &__descr {
     font-weight: 400;
     line-height: 1.75;
-    color: #5f6775;
+    color: var(--accent-gray-modal);
     margin-bottom: 32px;
   }
 }
@@ -149,9 +149,9 @@
   &__text {
     font-family: 'Poppins';
     font-weight: 300;
-    font-size: 14px;
+    font-size: var(--basic-font-size);
     line-height: 1.5;
-    color: #202025;
+    color: var(--text-color);
     margin: 8px 0;
   }
 }
@@ -205,7 +205,7 @@
   .ingredients {
     margin-left: 292px;
     &__title {
-      color: #202025;
+      color: var(--text-color);
       margin-top: 28px;
     }
   }
@@ -216,13 +216,13 @@
   .modal-cocktails {
     min-width: 822px;
     &__title {
-      color: #202025;
+      color: var(--text-color);
     }
   }
 
   .instractions {
     &__title {
-      color: #202025;
+      color: var(--text-color);
     }
   }
 }
