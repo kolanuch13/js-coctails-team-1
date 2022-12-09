@@ -1,3 +1,5 @@
+console.log(1);
+
 modalWin = (() => {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-win-open]'),
