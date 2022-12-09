@@ -1,6 +1,4 @@
-console.log(1);
-
-modalWin = (() => {
+modalWin = () => {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-win-open]'),
     closeModalBtn: document.querySelector('[data-modal-win-close]'),
@@ -8,7 +6,9 @@ modalWin = (() => {
     btn: document.querySelector('.modal__bottom-btn'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.openModalBtn.addEventListener('click', () => {
+    console.log(1);
+  });
   refs.closeModalBtn.addEventListener('click', toggleModal);
   refs.btn.addEventListener('click', toggleBottomBtn);
 
@@ -23,4 +23,4 @@ modalWin = (() => {
   function toggleModal() {
     refs.modal.classList.toggle('is-win-hidden');
   }
-})();
+};

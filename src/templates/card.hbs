@@ -1,11 +1,12 @@
 {{#each this}}
+{{!-- <div class="coctails__item"> --}}
     <li class="coctails__item">
         <img class="coctails__item-image" src="{{strDrinkThumb}}" alt="{{strDrink}}">
         <h3 class="coctails__item-title">
             {{strDrink}}
         </h3>
         <div class="coctails__item-button-wrapper">
-            <button class="coctails__item-button" type="button" data-modal-win-open>Learn more</button>
+            <button id="modal-win-open" class="coctails__item-button" type="button" data-modal-win-open>Learn more</button>
             <button class="coctails__item-button" type="button">Add to
                 <svg class="icon icon-heart-stroked" width="21px" height="19px">
                     <use xlink:href="./images/sprite.svg#icon-heart-stroked"></use>
@@ -13,4 +14,5 @@
             </button>
         </div>
     </li>
+{{!-- </div> --}}
 {{/each}}
