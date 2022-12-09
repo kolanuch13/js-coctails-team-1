@@ -1,6 +1,6 @@
 modalCocktails = (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-win-open]'),
+    openModalBtn: document.querySelector('.coctails__item-button'),
     closeModalBtn: document.querySelector('[data-modal-win-close]'),
     modal: document.querySelector('[data-modal-win]'),
     btn: document.querySelector('.modal__bottom-btn'),
