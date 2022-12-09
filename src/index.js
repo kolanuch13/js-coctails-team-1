@@ -5,8 +5,9 @@ const refs = {
   searchForm: document.querySelector('#search-form'),
   searchInput: document.querySelector('.search-input'),
   searchBtn: document.querySelector('.search-button'),
-  container: document.querySelector('.coctails__list1'),
+  container: document.querySelector('.coctails__list')
 };
+
 console.log(refs.container);
 
 refs.searchForm.addEventListener('submit', onSearchForm);
@@ -23,7 +24,7 @@ function onSearchForm(event) {
     for (let i = 0; i < 6; i++) {
       result.push(data.drinks[i]);
     }
-
+    console.log(result);
     refs.container.innerHTML = templateFunction(result);
   });
 }
