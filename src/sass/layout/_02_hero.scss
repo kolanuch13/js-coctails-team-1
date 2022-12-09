@@ -269,7 +269,7 @@ li {
 }
 
 .hero__icon {
-  fill: var(--accent-grapefruit);
+  // fill: var(--accent-grapefruit);
   width: 24px;
   position: absolute;
   top: -5px;
@@ -281,8 +281,8 @@ li {
 }
 
 .change-color {
-  color: var(--primary-bg-color);
+  color: var(--white-color);
 }
 .change-icon-color {
-  fill: var(--primary-bg-color);
+  fill: var(--white-color);
 }

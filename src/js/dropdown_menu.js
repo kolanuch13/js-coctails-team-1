@@ -1,4 +1,4 @@
-// import {fetchCocktails} from './js/fetchCocktails';
+import {fetchCocktails} from './fetchCocktails';
 import onClickBtn from './alphabet_search';
 
 const customSelect = document.querySelector('.select');
@@ -6,6 +6,10 @@ const dropDown = document.querySelector('.select__dropdown');
 const listMobi = document.querySelector('.hero-list__mobi');
 const selectText = document.querySelector('.input-text');
 const svgHero = document.querySelector('.hero__icon');
+
+function onClickBtn (event){
+  console.log(event.target.dataset.value);
+}
 
 customSelect.addEventListener('click', onClickCustomSelect);
 
