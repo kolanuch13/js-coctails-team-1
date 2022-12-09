@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default class ImageApiService {
+export default class CoctailApiService {
     constructor() {
         this.searchQuery = "";
         this.filter = "";
@@ -8,7 +8,7 @@ export default class ImageApiService {
         this.page = 1;
     }
 
-    async fetchImages() {
+    async fetchCoctails() {
         const params = new URLSearchParams({
             s: this.searchQuery,
             f: this.filter,
@@ -18,6 +18,7 @@ export default class ImageApiService {
         const URL = `www.thecocktaildb.com/api/json/v1/1/search.php?${params}`;
 
         const responce = await axios.get(URL);
+        console.log(responce);
         return await responce.data.hits;
     }
 
