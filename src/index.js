@@ -1,5 +1,6 @@
 import { fetchCocktails } from './js/fetchCocktails.js';
 import templateFunction from './templates/card.hbs';
+import Pagination from "./js/Pagination";
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
@@ -7,8 +8,6 @@ const refs = {
   searchBtn: document.querySelector('.search-button'),
   container: document.querySelector('.coctails__list')
 };
-
-console.log(refs.container);
 
 refs.searchForm.addEventListener('submit', onSearchForm);
 
@@ -19,13 +18,21 @@ function onSearchForm(event) {
 
   fetchCocktails(query).then(data => {
     let result = [];
-    const totalItems = data.drinks;
-
+    const totalItems = data.drinks.length;
+    // ========================================================== 
+    let pagination = new Pagination('pagination', {
+      totalItems: totalItems,
+      itemsPerPage: 6,
+      visiblePages: 5
+    });
+    
+    console.log(pagination._setCurrentPage);
+    // ==========================================================
     for (let i = 0; i < 6; i++) {
       result.push(data.drinks[i]);
     }
     console.log(result);
+    // ==========================================================
     refs.container.innerHTML = templateFunction(result);
   });
 }
-
