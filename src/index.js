@@ -1,4 +1,4 @@
-import mobileMenu from './js/mobile-menu';
+import mobileMenu from './js/mobile-menu.js';
 mobileMenu();
 
 import { fetchCocktails } from './js/fetchCocktails.js';

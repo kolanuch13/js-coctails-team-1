@@ -55,24 +55,27 @@
 
     <div class="mobile-menu" data-menu>
       <div class="container mobile-menu__container">
+             <div><a href="./index.html" class="mobile-menu__logo">
+        <img src="./images/logo.svg" alt="cocktails" />
+      </a></div>
                           <div class="mobile-menu__toggleWrapper">
-        <p class="Light">Light</p>
+        <p class="mobile-menu-Light">Light</p>
   <input type="checkbox" class="dn" id="dn"/>
-    <label for="dn" class="toggle">
-    <span class="toggle__handler">
+    <label for="dn" class="mobile-menu__toggle">
+    <span class="mobile-menu-toggle__handler">
   </label>
-  <p class="Dark">Dark</p>
+  <p class="mobile-menu-Dark">Dark</p>
 </div>
-          <div class="search-container">
-      <form class="search-form" id="search-form">
-         <button type="submit" class="search-button">
+          <div class="mobile-menu__search-container">
+      <form class="mobile-menu__search-form" id="search-form">
+         <button type="submit" class="mobile-menu__search-button">
           <span class="material-icons">
-              <svg class="search-magni-glass" width="24" height="24">
+              <svg class="mobile-menu__search-magni-glass" width="24" height="24">
                  <use xlink:href="./images/sprite.svg#icon-search"></use>
               </svg>
           </span>
         </button>
-        <input class="search-input"
+        <input class="mobile-menu__search-input"
           type="text"
           name="searchQuery"
           autocomplete="off"
@@ -82,7 +85,7 @@
       </form>
     </div>
         <button type="button" class="mobile-menu__close-btn" data-menu-close>
-          <svg class="mobile-menu__close-icon" width="24" height="24">
+          <svg class="mobile-menu__close-icon" width="32" height="32">
             <use href="./images/sprite.svg#icon-clarity_close-line"></use>
           </svg>
         </button>

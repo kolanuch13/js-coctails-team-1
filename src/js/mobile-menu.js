@@ -1,5 +1,4 @@
-mobileMenu = () => {
-
+export default mobileMenu = () => {
   const refs = {
     openMenuBtn: document.querySelector('[data-menu-open]'),
     closeMenuBtn: document.querySelector('[data-menu-close]'),
