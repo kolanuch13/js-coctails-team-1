@@ -1,3 +1,5 @@
+import mobileMenu from './js/mobile-menu.js';
+mobileMenu();
 import { fetchCocktails } from './js/fetchCocktails.js';
 import templateFunction from './templates/card.hbs';
 import templateCocktailFunction from './templates/modal-cocktails.hbs';

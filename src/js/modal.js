@@ -6,9 +6,7 @@ modalWin = () => {
     btn: document.querySelector('.modal__bottom-btn'),
   };
 
-  refs.openModalBtn.addEventListener('click', () => {
-    console.log(1);
-  });
+  refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
   refs.btn.addEventListener('click', toggleBottomBtn);
 
@@ -19,7 +17,7 @@ modalWin = () => {
       refs.btn.textContent = 'Add to favorite';
     }
   }
-  
+
   function toggleModal() {
     refs.modal.classList.toggle('is-win-hidden');
   }
