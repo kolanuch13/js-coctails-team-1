@@ -1,4 +1,35 @@
-export default modalCocktails = () => {
+import { fetchCocktails } from './fetchCocktails.js';
+import templateFunction from '../templates/card.hbs';
+import modalCocktails from './modal-cocktails';
+
+const refs = {
+  searchForm: document.querySelector('#search-form'),
+  searchInput: document.querySelector('.search-input'),
+  searchBtn: document.querySelector('.search-button'),
+  container: document.querySelector('.coctails__list'),
+  paginator: document.querySelector('.tui-pagination'),
+  // ==================================================
+  // openModalBtn: document.querySelectorAll('[data-modal-win-open]'),
+};
+refs.searchForm.addEventListener('submit', onSearchForm);
+
+function onSearchForm(event) {
+  event.preventDefault();
+  refs.searchInput.innerHTML = '';
+  const query = event.currentTarget.searchQuery.value.trim();
+  
+  fetchCocktails(query).then(data => {
+    refs.container.innerHTML = templateFunction(data.drinks);
+    modalCocktails();
+  });
+}
+
+// ===========================================================================
+
+  
+// ==========================================================================
+
+modalCocktails = (() => {
   const refs = {
     openModalBtn: document.querySelectorAll('[data-modal-win-open]'),
     closeModalBtn: document.querySelector('[data-modal-win-close]'),
@@ -21,12 +52,12 @@ export default modalCocktails = () => {
   function closeBackdrop(e) {
     if (!e.target.closest('.modal')) {
       toggleModal();
-      console.log(1);
     }
   }
 
   function toggleModal() {
     refs.backdrop.classList.toggle('is-win-hidden');
+    console.log(1);
   }
 
   // Modal Ingridients
@@ -82,4 +113,5 @@ export default modalCocktails = () => {
       }
     });
   }
-};
+})();
+
