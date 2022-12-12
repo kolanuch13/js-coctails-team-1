@@ -1,4 +1,4 @@
-export default mobileMenu = () => {
+const mobileMenu = () => {
   const refs = {
     openMenuBtn: document.querySelector('[data-menu-open]'),
     closeMenuBtn: document.querySelector('[data-menu-close]'),
@@ -7,8 +7,10 @@ export default mobileMenu = () => {
 
   refs.openMenuBtn.addEventListener('click', toggleModal);
   refs.closeMenuBtn.addEventListener('click', toggleModal);
-
+  
   function toggleModal() {
     refs.menu.classList.toggle('is-open');
   }
 };
+
+mobileMenu();

@@ -1,0 +1,62 @@
+<header class="page-header">
+  <div class="container page-header__container">
+    <a href="./index.html" class="logo">
+      <img src="./images/logo.svg" alt="cocktails" />
+    </a>
+    <nav class="nav">
+      <ul class="list list">
+        <li>
+          <a href="./index.html" class="link link">Home</a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <a href="#" data-toggle="dropdown">Favorite
+              <svg class="menu__icon-arrow" width="24" height="24">
+                <use class="menu__icon-arrow-swg" href="./images/sprite.svg#icon-arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Favorite cocktails</a></li>
+              <li><a href="#">Favorite ingredients</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="search-container">
+      <form class="search-form" id="search-form">
+        <button type="submit" class="search-button" id="search-button">
+          <span class="material-icons">
+            <svg class="search-magni-glass" width="24" height="24">
+              <use xlink:href="./images/sprite.svg#icon-search"></use>
+            </svg>
+          </span>
+        </button>
+        <input
+          class="search-input"
+          id="search-button"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder=" Search"
+        />
+      </form>
+    </div>
+
+    <div class="toggleWrapper">
+      <p class="Light">Light</p>
+      <input type="checkbox" class="dn" id="dn" />
+      <label for="dn" class="toggle">
+        <span class="toggle__handler"></span>
+      </label>
+      <p class="Dark">Dark</p>
+    </div>
+
+    <button type="button" class="menu__button-open" data-menu-open>
+      <svg class="menu__button-icon">
+        <use class="menu__button-open-svg" href="./images/sprite.svg#icon-menu"></use>
+      </svg>
+    </button>
+  </div>
+</header>

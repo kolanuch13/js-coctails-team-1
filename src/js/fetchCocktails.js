@@ -5,3 +5,9 @@ export async function fetchCocktails(query) {
   const data = await response.json();
   return data;
 }
+
+export async function fetchLetters(query) {
+  const response = await fetch(`${BASE_URL}f=${query}`);
+  const data = await response.json();
+  return data;
+}
