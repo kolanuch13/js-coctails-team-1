@@ -32,6 +32,9 @@
     background-color: var(--white-color);
     border-radius: 0 4px 4px 0;
     outline: none;
+    &::placeholder {
+      color: var(--text-color);
+    }
   }
   &-magni-glass {
     display: block;

@@ -1,6 +1,7 @@
 import { fetchCocktails, fetchLetters } from './fetchCocktails.js';
 import templateFunction from '../templates/card.hbs';
 import modalCocktails from './modal-cocktails';
+import modalAuth from './modal-auth';
 
 const refs = {
   // PAGES
@@ -33,6 +34,7 @@ function onSearchForm(event) {
       refs.cocktailsPage.style.display = "flex";       
       refs.container.innerHTML = templateFunction(data.drinks);
       modalCocktails();
+      modalAuth();
     } else {
       refs.errorPage.style.display = "flex";  
       refs.cocktailsPage.style.display = "none";          
@@ -51,6 +53,7 @@ function onClickBtn (event){
       refs.cocktailsPage.style.display = "flex";
       refs.container.innerHTML = templateFunction(data.drinks);
       modalCocktails();
+      modalAuth();
     } else {
       refs.errorPage.style.display = "flex";
       refs.cocktailsPage.style.display = "none";
