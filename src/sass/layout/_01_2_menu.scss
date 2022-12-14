@@ -41,6 +41,7 @@
                 display: inline-block;
                 position: relative;
                 z-index: 1;
+                top: 0.1px;
                 left: 2px;
                 width: 12px;
                 height: 12px;
@@ -51,6 +52,28 @@
                 transform: rotate(-45deg);
             }
     }
+
+input:checked {
+    +.menu__toggle {
+        &:after {
+            color: var(--white-color);
+        }
+
+        .menu__toggle--handler {
+            transform: translate3d(10px, 0, 0) rotate(0);
+        }
+    }
+}
+
+@keyframes blink {
+    85% {
+        transform: rotateX(0deg);
+    }
+
+    90% {
+        transform: rotateX(90deg);
+    }
+}
 // ========================SEARCH
     &__search {
         &-form {
@@ -142,7 +165,7 @@
             }
         }
 
-        .dropdown-menu {
+        &-menu {
             max-height: 0;
             overflow: hidden;
             border: 1px solid var(--accent-grapefruit);

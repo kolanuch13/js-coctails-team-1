@@ -2,12 +2,13 @@
 const dropdown = document.querySelectorAll('.menu__dropdown');
 const dropdownArray = Array.prototype.slice.call(dropdown,0);
 dropdownArray.forEach(function(el){
-	var button = el.querySelector('a[data-toggle="dropdown"]'),
+	const button = el.querySelector('a[data-toggle="dropdown"]'),
 			menu = el.querySelector('.dropdown-menu'),
 			arrow = button.querySelector('.menu__icon-arrow');
 
 	button.onclick = function(event) {
-		if(!menu.hasClass('show')) {
+		if (!menu.hasClass('show')) {
+			console.log("Hello!");
 			menu.classList.add('show');
 			menu.classList.remove('hide');
 			arrow.classList.add('open');

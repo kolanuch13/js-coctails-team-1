@@ -4,20 +4,20 @@
       <img src="./images/logo.svg" alt="cocktails" />
     </a>
     <nav class="nav">
-      <ul class="list list">
+      <ul class="nav-list list">
         <li>
-          <a href="./index.html" class="link link">Home</a>
+          <a href="./index.html" class="nav-link link">Home</a>
         </li>
         <li>
           <div class="dropdown">
             <a href="#" data-toggle="dropdown">Favorite
-              <svg class="menu__icon-arrow" width="24" height="24">
+              <svg class="menu__icon-arrow" width="30" height="30">
                 <use class="menu__icon-arrow-swg" href="./images/sprite.svg#icon-arrow-down"></use>
               </svg>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="#">Favorite cocktails</a></li>
-              <li><a href="#">Favorite ingredients</a></li>
+              <li><a href="/src/favorites.html">Favorite cocktails</a></li>
+              <li><a href="/src/favorites.html">Favorite ingredients</a></li>
             </ul>
           </div>
         </li>
@@ -33,14 +33,8 @@
             </svg>
           </span>
         </button>
-        <input
-          class="search-input"
-          id="search-button"
-          type="text"
-          name="searchQuery"
-          autocomplete="off"
-          placeholder=" Search"
-        />
+        <input class="search-input" id="search-button" type="text" name="searchQuery" autocomplete="off"
+          placeholder=" Search" />
       </form>
     </div>
 
@@ -54,7 +48,7 @@
     </div>
 
     <button type="button" class="menu__button-open" data-menu-open>
-      <svg class="menu__button-icon">
+      <svg class="menu__button-icon" width="30" height="16">
         <use class="menu__button-open-svg" href="./images/sprite.svg#icon-menu"></use>
       </svg>
     </button>
