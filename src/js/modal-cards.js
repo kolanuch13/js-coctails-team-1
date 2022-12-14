@@ -18,9 +18,7 @@ export default modalCards = () => {
     refs.backdrop.classList.remove('is-win-hidden');
 
       let idCocktail = event.currentTarget.dataset.id;
-      console.log(idCocktail);
-
-    fetchById(idCocktail).then(data => {
+      fetchById(idCocktail).then(data => {
         refs.backdropCocktails.innerHTML = templateFunctionCocktails(data.drinks);
         modalCocktails();
     });
