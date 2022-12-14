@@ -13,7 +13,7 @@ li {
 
 .section-hero {
   background-color: var(--primary-bg-color);
-  padding-top: 197px;
+  padding-top: 132px;
   padding-bottom: 30px;
 }
 
@@ -118,12 +118,12 @@ li {
 
   @media screen and (min-width: 768px) {
     position: absolute;
-    top: 250px;
+    top: 100px;
     right: 0;
   }
 
   @media screen and (min-width: 1280px) {
-    top: 100px;
+    top: 50px;
     right: 0;
   }
 }
