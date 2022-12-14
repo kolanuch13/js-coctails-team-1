@@ -1,6 +1,8 @@
 import { fetchCocktails, fetchLetters } from './fetchCocktails.js';
 import templateFunction from '../templates/card.hbs';
+import modalIngredients from './modal-ingredients.js';
 import modalCocktails from './modal-cocktails';
+import modalCards from './modal-cards.js';
 import modalAuth from './modal-auth';
 
 const refs = {
@@ -33,7 +35,9 @@ function onSearchForm(event) {
       refs.errorPage.style.display = "none";  
       refs.cocktailsPage.style.display = "flex";       
       refs.container.innerHTML = templateFunction(data.drinks);
+      modalCards();
       modalCocktails();
+      modalIngredients();
       modalAuth();
     } else {
       refs.errorPage.style.display = "flex";  
@@ -52,7 +56,9 @@ function onClickBtn (event){
       refs.errorPage.style.display = "none";
       refs.cocktailsPage.style.display = "flex";
       refs.container.innerHTML = templateFunction(data.drinks);
+      modalIngredients();
       modalCocktails();
+      modalCards()
       modalAuth();
     } else {
       refs.errorPage.style.display = "flex";

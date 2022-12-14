@@ -1,70 +1,25 @@
+import { fetchIngredients } from './fetchCocktails';
+import templateFunctionIngredients from '../templates/modal-ingredients.hbs';
+import modalIngredients from './modal-ingredients';
+
 export default modalCocktails = () => {
   const refs = {
-    openModalBtn: document.querySelectorAll('[data-modal-win-open]'),
-    closeModalBtn: document.querySelector('[data-modal-win-close]'),
+    closeModalBtn: document.querySelectorAll('[data-modal-win-close]'),
     backdrop: document.querySelector('[data-modal-win]'),
-    bottomBtn: document.querySelectorAll('.modal-ingredients__bottom-btn'),
     bottomCocktailsBtn: document.querySelectorAll('.modal-cocktails__bottom-btn'),
     openModalIngrBtn: document.querySelectorAll('[data-modal-ingredients-open]'),
-    closeModalIngrBtn: document.querySelector('[data-modal-ingredients-close]'),
     backdropIngr: document.querySelector('[data-modal-ingredients]'),
+    backdropIngredients: document.querySelector('.js-backdrop-ingredients'),
   };
 
-  // Modal cocktails
+  // Close modal Cocktails btn
 
-  refs.openModalBtn.forEach(el => {
-    el.addEventListener('click', toggleModal);
-  });
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-  refs.backdrop.addEventListener('click', closeBackdrop);
-
-  function closeBackdrop(e) {
-    if (!e.target.closest('.modal')) {
-      toggleModal();
-      console.log(1);
-    }
-  }
-
-  function toggleModal() {
-    refs.backdrop.classList.toggle('is-win-hidden');
-  }
-
-  // Modal Ingridients
-
-  refs.openModalIngrBtn.forEach(el => {
-    el.addEventListener('click', toggleModalIngr);
+  refs.closeModalBtn.forEach(el => {
+    el.addEventListener('click', closeModal);
   });
 
-  refs.closeModalIngrBtn.addEventListener('click', toggleModalIngr);
-
-  function toggleModalIngr(e) {
-    e.preventDefault();
-    toggleModal();
-    refs.backdropIngr.classList.toggle('is-win-hidden');
-  }
-
-  refs.backdropIngr.addEventListener('click', closeBackdropIngr);
-
-  function closeBackdropIngr(e) {
-    if (!e.target.closest('.modal')) {
-      refs.backdropIngr.classList.toggle('is-win-hidden');
-    }
-  }
-
-  // Modal Ingridients Bottom Btn
-
-  refs.bottomBtn.forEach(el => {
-    el.addEventListener('click', toggleBottomBtn);
-  });
-
-  function toggleBottomBtn() {
-    refs.bottomBtn.forEach(el => {
-      if (el.textContent === 'Add to favorite') {
-        el.textContent = 'Remove from favorite';
-      } else {
-        el.textContent = 'Add to favorite';
-      }
-    });
+  function closeModal() {
+    refs.backdrop.classList.add('is-win-hidden');
   }
 
   // Modal Cocktails Bottom Btn
@@ -81,5 +36,38 @@ export default modalCocktails = () => {
         el.textContent = 'Add to favorite';
       }
     });
+  }
+
+  // Modal Ingridients
+
+  refs.openModalIngrBtn.forEach(el => {
+    // console.log(el.textContent === '');
+    if (el.textContent === '') {
+      el.closest('li').remove();
+    } else {
+      el.addEventListener('click', openModalIngr);
+    }
+  });
+
+  function openModalIngr(event) {
+    event.preventDefault();
+    closeModal();
+    refs.backdropIngr.classList.remove('is-win-hidden');
+    let ingr = event.currentTarget.textContent;
+
+    fetchIngredients(ingr).then(data => {
+      refs.backdropIngredients.innerHTML = templateFunctionIngredients(
+        data.ingredients
+      );
+      modalIngredients();
+    });
+  }
+
+  refs.backdropIngr.addEventListener('click', closeBackdropIngr);
+
+  function closeBackdropIngr(e) {
+    if (!e.target.closest('.modal')) {
+      refs.backdropIngr.classList.add('is-win-hidden');
+    }
   }
 };

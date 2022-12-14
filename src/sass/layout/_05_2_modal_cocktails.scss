@@ -173,6 +173,8 @@
     }
   }
   .modal-cocktails {
+    height: 570px;
+
     &__container {
       display: flex;
       flex-direction: column-reverse;
@@ -192,13 +194,12 @@
     }
   }
   .instractions {
+    position: absolute;
+    top: 330;
+
     &__title {
       color: #000917;
-      margin-top: 52px;
       margin-bottom: 24px;
-    }
-    &__descr {
-      margin-bottom: 88px;
     }
   }
 
