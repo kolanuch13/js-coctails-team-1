@@ -11,6 +11,5 @@ export default modalAuth = () => {
 
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
-    console.log(refs.modal);
   }
 };

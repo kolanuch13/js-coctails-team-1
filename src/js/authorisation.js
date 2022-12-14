@@ -1,4 +1,6 @@
-import { firebase } from '@firebase/app';
+// import firebase from '/firebase';
+import { getDatabase, ref, set } from 'firebase/database';
+import { app } from './db-firebase';
 
 const refs = {
     form: document.querySelector('#auth-form'),
@@ -8,11 +10,12 @@ const refs = {
 
 // ========Login in=========== 
 
-const database = firebase.database();
+const db = getDatabase(app);
 
 refs.form.addEventListener('submit', event => {
     event.preventDefault();
-    database.ref('/users/' + Math.floor(Math.random * 8)).set({
+    const dbRef = ref(db,`/users/${Math.floor(Math.random * 8)}`)
+    const dbSet = set(dbRef, {
         name: refs.name.value,
         password: refs.password.value
     })
