@@ -1,9 +1,8 @@
-import { fetchCocktails, fetchLetters } from './fetchCocktails.js';
+import { fetchCocktails, fetchLetters, fetchRandom } from './fetchCocktails.js';
 import templateFunction from '../templates/card.hbs';
 import modalIngredients from './modal-ingredients.js';
-import modalCocktails from './modal-cocktails';
+import modalCocktails from './modal-cocktails.js';
 import modalCards from './modal-cards.js';
-import modalAuth from './modal-auth';
 
 const refs = {
   // PAGES
@@ -21,9 +20,22 @@ const refs = {
 
 refs.searchForm.addEventListener('submit', onSearchForm);
 refs.mSearchForm.addEventListener('submit', onSearchForm);
+
 refs.letter.addEventListener('click', onClickBtn);
 refs.listMobi.addEventListener('click', onClickBtn);
 
+const startMarkup = () => {
+  for (let i = 0; i < 6; i++) {
+    fetchRandom().then(data => {
+      const markup = templateFunction(data.drinks);
+      refs.container.insertAdjacentHTML("beforeend", markup);
+      modalCards();
+      modalCocktails();
+      modalIngredients();
+    })
+  }
+}
+startMarkup();
 
 function onSearchForm(event) {
   event.preventDefault();
@@ -38,7 +50,6 @@ function onSearchForm(event) {
       modalCards();
       modalCocktails();
       modalIngredients();
-      modalAuth();
     } else {
       refs.errorPage.style.display = "flex";  
       refs.cocktailsPage.style.display = "none";          
@@ -59,10 +70,11 @@ function onClickBtn (event){
       modalIngredients();
       modalCocktails();
       modalCards()
-      modalAuth();
     } else {
       refs.errorPage.style.display = "flex";
       refs.cocktailsPage.style.display = "none";
     }
   });
 }
+
+

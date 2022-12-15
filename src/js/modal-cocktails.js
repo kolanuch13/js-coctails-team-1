@@ -1,6 +1,6 @@
-import { fetchIngredients } from './fetchCocktails';
+import { fetchIngredients } from './fetchCocktails.js';
 import templateFunctionIngredients from '../templates/modal-ingredients.hbs';
-import modalIngredients from './modal-ingredients';
+import modalIngredients from './modal-ingredients.js';
 
 export default modalCocktails = () => {
   const refs = {
