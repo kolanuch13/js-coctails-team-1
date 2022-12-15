@@ -31,3 +31,4 @@ export async function fetchRandom() {
   const data = await response.json();
   return data;
 }
+

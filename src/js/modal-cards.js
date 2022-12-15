@@ -1,4 +1,4 @@
-import { fetchById } from './fetchCocktails.js';
+import { fetchById } from './fetch-cocktails.js';
 import { db, dbRefCheck } from './db-firebase';
 import { ref, set, get, child, update } from 'firebase/database';
 import {arrayUnion} from 'firebase/firestore';
