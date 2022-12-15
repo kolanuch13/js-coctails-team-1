@@ -42,55 +42,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .dropdown {
- 
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.33;
-    margin-top: 6px;
-
-    letter-spacing: 0.02em;
-    color: var(--text-color);
-
-    .menu__icon-arrow {
-      visibility: hidden;
-    }
-
-    &-menu {
-      max-height: 0;
-      width: 210px;
-      border: 0 1px 1px 1px solid var(--accent-grapefruit);
-      border-radius: 4px;
-
-      li {
-        border: 1px solid var(--accent-grapefruit);
-        padding: 0;
-
-        &:hover,
-        &:focus {
-          color: var(--white-color);
-          background-color: var(--accent-grapefruit);
-        }
-
-        a {
-          display: block;
-          color: var(--text-color);
-          padding: 10px 10px;
-        }
-      }
-    }
-
-    .show {
-      display: block;
-      max-height: 9999px;
-    }
-
-    .hide {
-      max-height: 0;
-    }
-  }
   
   .page-header {
     &__container {
@@ -106,11 +57,11 @@
       display: none;
     }
   }
-
+  
   .toggleWrapper {
     display: none;
   }
-
+  
   .nav {
     display: none;
   }
@@ -124,7 +75,7 @@
       display: none;
     }
   }
-
+  
   .menu__button-open {
     display: flex;
     justify-content: center;
@@ -151,10 +102,60 @@
 }
 
 @media screen and (min-width: 768px) {
+  .dropdown {
+  
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    margin-top: 28px;
+  
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+  
+    .menu__icon-arrow {
+      visibility: hidden;
+    }
+  
+    &-menu {
+      max-height: 0;
+      width: 210px;
+      border: 0 1px 1px 1px solid var(--accent-grapefruit);
+      border-radius: 4px;
+  
+      li {
+        border: 1px solid var(--accent-grapefruit);
+        padding: 0;
+  
+        &:hover,
+        &:focus {
+          color: var(--white-color);
+          background-color: var(--accent-grapefruit);
+        }
+  
+        a {
+          display: block;
+          color: var(--text-color);
+          padding: 10px 10px;
+        }
+      }
+    }
+  
+    .show {
+      display: block;
+      max-height: 9999px;
+    }
+  
+    .hide {
+      max-height: 0;
+    }
+  }
+
   .page-header__container {
     padding: 0;
   }
-
+  
   .logo {
     margin-right: 190px;
     margin-top: 20px;
@@ -163,7 +164,7 @@
   .toggleWrapper {
     display: none;
   }
-
+  
   .search-container {
     margin-top: 20px;
     margin-right: 40px;
@@ -210,8 +211,6 @@
   .menu__icon-arrow {
     visibility: hidden;
   }
-
-  
 
   .nav {
     display: flex;
