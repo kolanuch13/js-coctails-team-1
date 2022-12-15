@@ -1,4 +1,3 @@
-// import firebase from '/firebase';
 import { ref, set, get, child } from 'firebase/database';
 import { db, dbRefCheck } from './db-firebase';
 
@@ -15,7 +14,8 @@ const refs = {
 // ========Login in=========== 
 let user = {
     userId: "",
-    favoriteCoctails: "",
+    userPass: "",
+    favoriteCocktails: "",
     favoriteIngredients: "",
 }
 
@@ -27,25 +27,38 @@ refs.form.addEventListener('submit', event => {
         // REGISTRATION
         user.userId = refs.name.value;
         if(Object.keys(usersDataBase).indexOf(user.userId) > -1) {
-            console.log("Success to found the user");
+            alert("Success to found the user");
+            
+            user.userPass = refs.password.value;
 
-            localStorage.setItem("user", user.userId)
-
+            localStorage.setItem("userId", `${user.userId}`);
+            localStorage.setItem("userPass", `${user.userPass}`)
+            
             if (usersDataBase[user.userId].password=== refs.password.value) {
-                console.log(`Welcome ${user.userId}!`);
-                user.favoriteCoctails = usersDataBase[user.userId].coctails;
+                alert(`Welcome ${user.userId}!`);
+                user.favoriteCocktails = usersDataBase[user.userId].cocktails;
                 user.favoriteIngredients = usersDataBase[user.userId].ingredients;
+                localStorage.setItem("favoriteCocktails", `${user.favoriteCocktails}`)
+                localStorage.setItem("favoriteIngredients", `${user.favoriteIngredients}`)
                 refs.modal.classList.toggle("is-hidden");
                 } else {
-                    console.log("Unncorrect password, please, try again.");
+                    alert("Unncorrect password, please, try again.");
                 }
         } else {
             const dbRef = ref(db,`/users/${user.userId}`)
             const dbSet = set(dbRef, {
                 password: refs.password.value,
-                cocktails: [`11007`, `13690`],
+                cocktails: [`11007`],
                 ingredients: [`552`],
             })
+
+            localStorage.setItem("user", {
+                "userId": `${user.userId}`,
+                "userPass": `${user.userPass}`,
+                "favoriteCoctails": `${user.favoriteCocktails}`,
+                "favoriteIngredients": `${user.favoriteIngredients}`,
+            })
+
             refs.modal.classList.toggle("is-hidden");
         }            
     })

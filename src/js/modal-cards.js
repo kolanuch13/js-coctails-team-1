@@ -4,8 +4,8 @@ import { ref, set, get, child, update } from 'firebase/database';
 import {arrayUnion} from 'firebase/firestore';
 
 
-import templateFunctionCocktails from '../templates/modal-cocktails.hbs';
-import modalCocktails from './modal-cocktails.js';
+import {templateFunctionCocktails} from '../templates/modal-cocktails.hbs';
+import {modalCocktails} from './modal-cocktails.js';
 
 export default modalCards = () => {
     const refs = {
@@ -43,13 +43,16 @@ export default modalCards = () => {
     el.addEventListener('click', (event)=>{
       const idCocktail = event.currentTarget.dataset.id;
       console.log(idCocktail);
-
+      // ==Database
       const myUser = localStorage.getItem("user");
-      // const dbRef = ref(db +`/users/${myUser}/cocktails`);
-      // console.log(dbRef);
-      update(ref(db,'/users/' + myUser), {
-        cocktails: arrayUnion(idCocktail)
-      });
+      // ==client
+      console.log(localStorage.getItem('favoriteCocktails').indexOf(idCocktail));
+      const favorites = localStorage.getItem('favoriteCocktails');
+      if (favorites.indexOf(idCocktail) === null) {
+        localStorage.setItem('favoriteCoctails', idCocktail)
+      } else {
+        localStorage.removeItem('favoriteCoctails', idCocktail)
+      };
     })
   });
 };
