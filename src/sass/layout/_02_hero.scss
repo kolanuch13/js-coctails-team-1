@@ -66,6 +66,7 @@ li {
   @media screen and (min-width: 320px) {
     display: none;
   }
+
   @media screen and (min-width: 768px) {
     display: contents;
     font-family: 'Poppins';
@@ -79,6 +80,7 @@ li {
     margin-bottom: 40px;
     width: 324px;
   }
+
   @media screen and (min-width: 1280px) {
     font-size: 18px;
     line-height: 1.5;
@@ -132,7 +134,7 @@ li {
   }
 }
 
-.hero-container-second{
+.hero-container-second {
   @media screen and (min-width: 320px) {
     display: flex;
     align-content: space-between;
@@ -146,9 +148,7 @@ li {
 
   }
 
-  @media screen and (min-width: 1280px) {
-
-  }
+  @media screen and (min-width: 1280px) {}
 }
 
 
@@ -184,14 +184,15 @@ li {
     display: none;
   }
 }
+
 .select {
   @media screen and (min-width: 320px) {
-     width: 93px;
-  height: 34px;
-  border: 1px solid var(--accent-grapefruit);
-  border-radius: 4px;
-  cursor: pointer;
-  padding-top: 6px;
+    width: 93px;
+    height: 34px;
+    border: 1px solid var(--accent-grapefruit);
+    border-radius: 4px;
+    cursor: pointer;
+    padding-top: 6px;
   }
 }
 
@@ -233,10 +234,10 @@ li {
   }
 }
 
-.select__dropdown.is-hidden  {
-  @media screen and (min-width: 320px){
-      opacity: 0;
-      pointer-events: none;
+.select__dropdown.is-hidden {
+  @media screen and (min-width: 320px) {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -251,26 +252,28 @@ li {
 
 .hero-item {
 
-  @media screen and (min-width: 320px){
-     font-family: 'Poppins';
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: var(--accent-gray);
+  @media screen and (min-width: 320px) {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--accent-gray);
   }
-  @media screen and (min-width: 768px){
-     width: 24px;
+
+  @media screen and (min-width: 768px) {
+    width: 24px;
     height: 25px;
     color: var(--accent-gray);
     justify-content: center;
     align-items: center;
     line-height: 1.5;
   }
-  @media screen and (min-width: 1280px){
+
+  @media screen and (min-width: 1280px) {
     width: 40px;
     height: 40px;
     left: 335px;
@@ -309,6 +312,7 @@ li {
 .change-color {
   color: var(--white-color);
 }
+
 .change-icon-color {
   fill: var(--white-color);
 }

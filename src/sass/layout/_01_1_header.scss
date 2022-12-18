@@ -42,7 +42,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  
+
   .page-header {
     &__container {
       position: relative;
@@ -57,11 +57,11 @@
       display: none;
     }
   }
-  
+
   .toggleWrapper {
     display: none;
   }
-  
+
   .nav {
     display: none;
   }
@@ -75,7 +75,7 @@
       display: none;
     }
   }
-  
+
   .menu__button-open {
     display: flex;
     justify-content: center;
@@ -103,37 +103,37 @@
 
 @media screen and (min-width: 768px) {
   .dropdown {
-  
+
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.33;
     margin-top: 28px;
-  
+
     letter-spacing: 0.02em;
     color: var(--text-color);
-  
+
     .menu__icon-arrow {
       visibility: hidden;
     }
-  
+
     &-menu {
       max-height: 0;
       width: 210px;
       border: 0 1px 1px 1px solid var(--accent-grapefruit);
       border-radius: 4px;
-  
+
       li {
         border: 1px solid var(--accent-grapefruit);
         padding: 0;
-  
+
         &:hover,
         &:focus {
           color: var(--white-color);
           background-color: var(--accent-grapefruit);
         }
-  
+
         a {
           display: block;
           color: var(--text-color);
@@ -141,12 +141,12 @@
         }
       }
     }
-  
+
     .show {
       display: block;
       max-height: 9999px;
     }
-  
+
     .hide {
       max-height: 0;
     }
@@ -155,7 +155,7 @@
   .page-header__container {
     padding: 0;
   }
-  
+
   .logo {
     margin-right: 190px;
     margin-top: 20px;
@@ -164,7 +164,7 @@
   .toggleWrapper {
     display: none;
   }
-  
+
   .search-container {
     margin-top: 20px;
     margin-right: 40px;
@@ -204,7 +204,7 @@
 
 @media screen and (min-width: 1280px) {
 
-  .menu__button-icon{
+  .menu__button-icon {
     visibility: hidden;
   }
 
@@ -215,7 +215,7 @@
   .nav {
     display: flex;
   }
-  
+
   .nav-list {
     align-items: flex-end;
     display: flex;
@@ -237,7 +237,7 @@
     transition: var(--transition-dur-func);
   }
 
-  
+
 
   .logo {
     margin-top: 20px;
@@ -343,11 +343,14 @@
 
   input:checked {
     +.toggle {
+      border-color: #ffffff;
+      background-color: #fd5103;
       &:after {
         color: #ffffff;
       }
 
       .toggle__handler {
+    background-color: #ffffff;
         transform: translate3d(18px, 0, 0) rotate(0);
       }
     }

@@ -1,5 +1,5 @@
 import { fetchIngredients } from './fetch-cocktails.js';
-import templateFunctionIngredients from '../templates/modal-ingredients.hbs';
+import templateFunction from '../templates/modal-ingredients.hbs';
 import modalIngredients from './modal-ingredients.js';
 
 export default modalCocktails = () => {
@@ -56,7 +56,7 @@ export default modalCocktails = () => {
     let ingr = event.currentTarget.textContent;
 
     fetchIngredients(ingr).then(data => {
-      refs.backdropIngredients.innerHTML = templateFunctionIngredients(
+      refs.backdropIngredients.innerHTML = templateFunction(
         data.ingredients
       );
       modalIngredients();

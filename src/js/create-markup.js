@@ -7,13 +7,13 @@ import modalCards from './modal-cards.js';
 const refs = {
   // PAGES
   errorPage: document.querySelector('.error'),
-  cocktailsPage: document.querySelector('.coсtails'),
+  cocktailsPage: document.querySelector('.cocktails'),
   // SEARCH FORM
   searchForm: document.querySelector('.search-form'),
   mSearchForm: document.querySelector('.menu__search-form'),
   searchInput: document.querySelector('#search-input'),
   // LETTER SEARCH
-  container: document.querySelector('.coctails__list'),
+  container: document.querySelector('.cocktails__list'),
   letter: document.querySelector('.hero-list'),
   listMobi: document.querySelector('.hero-list__mobi'),
 };
@@ -43,7 +43,8 @@ function onSearchForm(event) {
   const query = event.currentTarget.searchQuery.value.trim();
   
   fetchCocktails(query).then(data => {
-    if(data.drinks !== null) {
+    if (data.drinks !== null) {
+      console.log(refs.cocktailsPage);
       refs.errorPage.style.display = "none";  
       refs.cocktailsPage.style.display = "flex";       
       refs.container.innerHTML = templateFunction(data.drinks);

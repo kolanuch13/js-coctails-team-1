@@ -18,11 +18,11 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
-    "@firebase/app": "^0.9.0",
     "axios": "^1.2.1",
-    "firebase": "^9.15.0",
     "hbs": "^4.2.0",
     "modern-normalize": "^1.1.0",
+    "parcel-transformer-hbs": "^1.0.4",
+    "transformer-js": "^0.0.9",
     "transformers": "^1.8.3"
   },
   "devDependencies": {
@@ -36,7 +36,6 @@
     "os-browserify": "^0.3.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "parcel-transformer-hbs": "^1.0.4",
     "path-browserify": "^1.0.1",
     "posthtml-include": "^1.7.4",
     "process": "^0.11.10",

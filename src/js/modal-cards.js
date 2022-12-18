@@ -1,11 +1,6 @@
 import { fetchById } from './fetch-cocktails.js';
-import { db, dbRefCheck } from './db-firebase';
-import { ref, set, get, child, update } from 'firebase/database';
-import {arrayUnion} from 'firebase/firestore';
-
-
-import {templateFunctionCocktails} from '../templates/modal-cocktails.hbs';
-import {modalCocktails} from './modal-cocktails.js';
+import templateFunction from '../templates/modal-cocktails.hbs';
+import modalCocktails from './modal-cocktails.js';
 
 export default modalCards = () => {
     const refs = {
@@ -26,7 +21,7 @@ export default modalCards = () => {
 
       let idCocktail = event.currentTarget.dataset.id;
       fetchById(idCocktail).then(data => {
-        refs.backdropCocktails.innerHTML = templateFunctionCocktails(data.drinks);
+        refs.backdropCocktails.innerHTML = templateFunction(data.drinks);
         modalCocktails();
     });
   }
@@ -42,17 +37,32 @@ export default modalCards = () => {
   refs.addCocktail.forEach(el => {
     el.addEventListener('click', (event)=>{
       const idCocktail = event.currentTarget.dataset.id;
-      console.log(idCocktail);
       // ==Database
       const myUser = localStorage.getItem("user");
+      ///// add to
+
+  let arrFavorite = [];
+
+  refs.addCocktail.forEach(el => {
+    el.addEventListener('click', saveId);
+    // console.log(refs.addToBtn);
+  });
+
+  function saveId(event) {
+    let idAddTo = event.currentTarget.dataset.id;
+    arrFavorite.push(idAddTo);
+    console.log(arrFavorite);
+    localStorage.setItem('favoriteCocktails', arrFavorite);
+  }
+
       // ==client
-      console.log(localStorage.getItem('favoriteCocktails').indexOf(idCocktail));
       const favorites = localStorage.getItem('favoriteCocktails');
-      if (favorites.indexOf(idCocktail) === null) {
-        localStorage.setItem('favoriteCoctails', idCocktail)
-      } else {
-        localStorage.removeItem('favoriteCoctails', idCocktail)
-      };
+      // if (favorites.indexOf(idCocktail) === null) {
+      //   localStorage.setItem('favoriteCoctails', idCocktail)
+      // } else {
+      //   localStorage.removeItem('favoriteCoctails', idCocktail)
+      // };
+      console.log(favorites);
     })
   });
 };
