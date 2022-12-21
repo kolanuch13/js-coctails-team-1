@@ -17,11 +17,11 @@ const ingredientsButton = document.querySelector('.go-to-ingredients');
 console.log(cocktailsSection.style);
 
 cocktailsButton.addEventListener('click', event => {
-	ingredientsSection.style.display = "none";
-	cocktailsSection.style.display = "flex";
+	// ingredientsSection.style.display = "none";
+	// cocktailsSection.style.display = "flex";
 })
 
 ingredientsButton.addEventListener('click', event => {
-	ingredientsSection.style.display = "flex";
-	cocktailsSection.style.display = "none";
+	// ingredientsSection.style.display = "flex";
+	// cocktailsSection.style.display = "none";
 })

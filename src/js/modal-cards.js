@@ -64,7 +64,6 @@ export default modalCards = () => {
                 </path>
             </svg>`);
       }
-      console.log(storFavorite);
     })
   });
 };
