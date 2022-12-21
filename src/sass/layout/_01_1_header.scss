@@ -236,8 +236,10 @@
     color: var(--text-color);
     transition: var(--transition-dur-func);
   }
-
-
+  
+  .nav-link:visited {
+    color: var(--text-color);
+  }
 
   .logo {
     margin-top: 20px;
@@ -249,46 +251,11 @@
 
   .page-header {
     width: 100%;
-    position: absolute;
 
     &__container {
       padding: 1px 16px;
     }
   }
-
-  // .menu {
-  //   display: flex;
-  //   margin-top: 20px;
-  //   margin-bottom: 0;
-  //   align-items: center;
-  //   gap: 60px;
-  //   padding-left: 0;
-  //   list-style-type: none;
-
-  //   &__link {
-  //     text-decoration: none;
-  //     font-family: 'Poppins';
-  //     font-style: normal;
-  //     font-weight: 400;
-  //     font-size: 18px;
-  //     line-height: 1.33;
-  //     letter-spacing: 0.02em;
-  //     color: #202025;
-  //     transition: var(--transition-dur-func);
-  //   }
-  // }
-
-  // .menu-option {
-  //   border: none;
-  //   font-family: 'Poppins';
-  //   font-style: normal;
-  //   font-weight: 400;
-  //   font-size: 18px;
-  //   line-height: 1.33;
-
-  //   letter-spacing: 0.02em;
-  //   color: #202025;
-  // }
 
   .search-container {
     margin-left: 176px;

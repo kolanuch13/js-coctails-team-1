@@ -18,6 +18,7 @@ const refs = {
   listMobi: document.querySelector('.hero-list__mobi'),
 };
 
+
 refs.searchForm.addEventListener('submit', onSearchForm);
 refs.mSearchForm.addEventListener('submit', onSearchForm);
 
@@ -36,7 +37,7 @@ const startMarkup = () => {
   }
 }
 startMarkup();
-
+// HOME PAGE
 function onSearchForm(event) {
   event.preventDefault();
   refs.searchInput.innerHTML = '';
@@ -44,7 +45,6 @@ function onSearchForm(event) {
   
   fetchCocktails(query).then(data => {
     if (data.drinks !== null) {
-      console.log(refs.cocktailsPage);
       refs.errorPage.style.display = "none";  
       refs.cocktailsPage.style.display = "flex";       
       refs.container.innerHTML = templateFunction(data.drinks);
@@ -77,5 +77,3 @@ function onClickBtn (event){
     }
   });
 }
-
-
