@@ -41,19 +41,18 @@ export default modalCocktails = () => {
   // Modal Ingridients
 
   refs.openModalIngrBtn.forEach(el => {
-    // console.log(el.textContent === '');
     if (el.textContent === '') {
       el.closest('li').remove();
     } else {
       el.addEventListener('click', openModalIngr);
     }
   });
-
+  
   function openModalIngr(event) {
     event.preventDefault();
     closeModal();
     refs.backdropIngr.classList.remove('is-win-hidden');
-    let ingr = event.currentTarget.textContent;
+    let ingr = event.currentTarget.dataset.id;
 
     fetchIngredients(ingr).then(data => {
       refs.backdropIngredients.innerHTML = templateFunction(

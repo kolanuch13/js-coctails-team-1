@@ -1,5 +1,6 @@
 @media screen and (min-width: 320px) {
     .favorite {
+        margin-bottom: 170px;
         // &__wrapper{
 
         // }
@@ -38,6 +39,82 @@
         
             text-align: center;
         }
+
+        &__item {
+            width: 100%;
+            border: 1px solid var(--accent-grapefruit);
+            border-radius: 4px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            &-title {
+                padding-top: 20px;
+                padding-left: 20px;
+                font-family: 'Roboto';
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 1.62;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            &-descript {
+                padding-left: 20px;
+                font-family: 'Roboto';
+                font-weight: 600;
+                font-size: 26;
+                line-height: 1.62;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            &-button {
+                &-wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 0;
+                    margin-bottom: 24px;
+                    margin-left: 24px;
+                    margin-right: 24px;
+                    gap: 16px;
+                }
+
+                background-color: var(--white-color);
+
+                display: flex;
+                flex-direction: row;
+                padding-top: 12px;
+                padding-bottom: 12px;
+
+                border-radius: 4px;
+
+                font-family: 'Roboto';
+                font-size: 14px;
+                line-height: 1.71;
+                letter-spacing: 0.02em;
+
+                &:first-child {
+                    padding: 7px 15px;
+                    align-items: center;
+                    align-content: center;
+                    border: none;
+                    background: var(--accent-auxiliary-orange);
+                    color: var(--white-color);
+                }
+
+                &:last-child {
+                    width: 110px;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    color: var(--accent-grapefruit);
+                    border: 2px solid var(--accent-grapefruit);
+                }
+            }
+        }
     }
   }
   
@@ -72,6 +149,45 @@
             
                 text-align: center;
             }
+
+            &__item {
+                width: calc((100% - 32px) / 2);
+
+                &-title {
+                    font-size: 28px;
+                    line-height: 1.62;
+                }
+
+                &-descript {
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: var(--accent-gray);
+                }
+
+                &-button {
+                    &-wrapper {
+                        margin-bottom: 20px;
+                        margin-left: 20px;
+                        margin-right: 20px;
+                        gap: 12px;
+                    }
+
+                    color: var(--white-text-color);
+                    font-size: 20px;
+                    line-height: 1.2;
+                    letter-spacing: 0.02em;
+
+                    &:first-child {
+                        width: 160px;
+                        justify-content: center;
+                    }
+
+                    &:last-child {
+                        width: 123px;
+                    }
+                }
+            }
         }
   }
   
@@ -102,6 +218,33 @@
                 line-height: 2.25;
             
                 text-align: center;
+            }
+
+            &__item {
+                width: calc((100% - 64px) / 3);
+
+                &-title {
+                    font-size: 32px;
+                    line-height: 1.18;
+                }
+
+                &-button {
+                    &-wrapper {
+                        margin-bottom: 28px;
+                        margin-left: 28px;
+                        margin-right: 28px;
+                        gap: 16px;
+                    }
+
+                    &:first-child {
+                        width: 182px;
+                        justify-content: center;
+                    }
+
+                    &:last-child {
+                        width: 141px;
+                    }
+                }
             }
         }
     

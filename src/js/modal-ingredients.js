@@ -17,6 +17,7 @@ export default modalIngredients = () => {
     refs.backdropIngr.classList.add('is-win-hidden');
   }
 
+  
   let arrFavoriteIngredients = [];
   if (localStorage.getItem("favoriteIngredients") !== null) {
     arrFavoriteIngredients = localStorage.getItem("favoriteIngredients").split(",");

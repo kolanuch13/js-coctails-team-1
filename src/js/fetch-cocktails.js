@@ -20,6 +20,12 @@ export async function fetchIngredients(ingr) {
   return data;
 }
 
+export async function fetchIngredientsId(id) {
+  const response = await fetch(`${search_url}iid=${id}`);
+  const data = await response.json();
+  return data;
+}
+
 export async function fetchById(id) {
   const response = await fetch(`${search_url}i=${id}`);
   const data = await response.json();
