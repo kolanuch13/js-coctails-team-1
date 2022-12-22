@@ -14,8 +14,6 @@ const ingredientsSection = document.querySelector('.favorites-ingredients');
 const cocktailsButton = document.querySelector('.go-to-cocktails');
 const ingredientsButton = document.querySelector('.go-to-ingredients');
 
-console.log(cocktailsSection.style);
-
 cocktailsButton.addEventListener('click', event => {
 	// ingredientsSection.style.display = "none";
 	// cocktailsSection.style.display = "flex";

@@ -1,4 +1,4 @@
-import { fetchCocktails, fetchLetters, fetchRandom } from './fetch-cocktails.js';
+import { fetchById, fetchIngredients } from './fetch-cocktails.js';
 import templateFunction from '../templates/card.hbs';
 import modalIngredients from './modal-ingredients.js';
 import modalCocktails from './modal-cocktails.js';
@@ -13,6 +13,7 @@ const refs = {
   btnFavIngredients: document.querySelector('.go-to-ingredients'),
   // elements
   title: document.querySelector('.favorite__title'),
+  list: document.querySelector('.favorite__list'),
 };
 
 refs.btnFavCocktails.addEventListener('click', openFavCocktails);
@@ -20,29 +21,43 @@ refs.btnFavIngredients.addEventListener('click', openFavIngredients);
 
 // FAVORITES PAGE
 function openFavCocktails (event){
-  refs.title.textContent = "ShabuLabudibu";
-  // const favCocktails = localStorage.getItem("favoriteCocktails");
+  event.preventDefault()
+  refs.title.textContent = "Favorite cocktails";
+  if (localStorage.getItem("favoriteCocktails") !== null
+  && localStorage.getItem("favoriteCocktails").length > 0) {
+    const query = localStorage.getItem("favoriteCocktails").split(",");
 
-  // const query = event.target.dataset.value;
-  
-  // fetchLetters(query).then(data => {
-  //   if(data.drinks !== null) {
-  //     refs.errorPage.style.display = "none";
-  //     refs.cocktailsPage.style.display = "flex";
-  //     refs.container.innerHTML = templateFunction(data.drinks);
-  //     modalIngredients();
-  //     modalCocktails();
-  //     modalCards()
-  //   } else {
-  //     refs.errorPage.style.display = "flex";
-  //     refs.cocktailsPage.style.display = "none";
-  //   }
-  // });
+    query.map(id => {
+      fetchById(id).then(data => {
+          refs.list.insertAdjacentHTML("beforeend", templateFunction(data.drinks));
+          modalIngredients();
+          modalCocktails();
+          modalCards()
+      });
+    })
+  } else {
+    refs.list.innerHTML = `<span  class="favorite__error">You haven't added any favorite cocktails yet</span>`
+  }
 }
 
 function openFavIngredients (event){
-  refs.favCocktails.style.display = "none";
-  refs.favIngredients.style.display = "flex";
+  event.preventDefault()
+  refs.title.textContent = "Favorite ingredients";
+  if (localStorage.getItem("favoriteIngredients") !== null
+  && localStorage.getItem("favoriteIngredients").length > 0) {
+    const query = localStorage.getItem("favoriteIngredients").split(",");
+
+    query.map(id => {
+      fetchIngredients(id).then(data => {
+          refs.list.insertAdjacentHTML("beforeend", templateFunction(data.drinks));
+          modalIngredients();
+          modalCocktails();
+          modalCards()
+      });
+    })
+  } else {
+    refs.list.innerHTML = `<span  class="favorite__error">You haven't added any favorite cocktails yet</span>`
+  }
 }
 
 
