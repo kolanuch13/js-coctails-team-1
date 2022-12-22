@@ -1,2 +1,0 @@
-!function(){const e=document.querySelector(".dropdown-button"),t=document.querySelector(".dropdown-menu");e.addEventListener("click",(e=>{t.classList.toggle("is-hidden")}));document.querySelector(".favorite-cocktails"),document.querySelector(".favorites-ingredients");const o=document.querySelector(".go-to-cocktails"),c=document.querySelector(".go-to-ingredients");o.addEventListener("click",(e=>{})),c.addEventListener("click",(e=>{}))}();
-//# sourceMappingURL=favorites.d2f7fa9f.js.map
