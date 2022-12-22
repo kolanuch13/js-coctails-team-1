@@ -1,0 +1,2 @@
+!function(){const e=document.querySelector(".dropdown-button"),t=document.querySelector(".dropdown-menu");e.addEventListener("click",(e=>{t.classList.toggle("is-hidden")}));const o=document.querySelector(".favorite-cocktails"),c=(document.querySelector(".favorites-ingredients"),document.querySelector(".go-to-cocktails")),n=document.querySelector(".go-to-ingredients");console.log(o.style),c.addEventListener("click",(e=>{})),n.addEventListener("click",(e=>{}))}();
+//# sourceMappingURL=favorites.c8018a4c.js.map
