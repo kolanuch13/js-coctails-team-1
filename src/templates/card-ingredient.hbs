@@ -1,15 +1,15 @@
 {{#each this}}
-<li class="ingredient__item">
-    <h3 class="ingredient__item-title">
+<li class="favorite__item">
+    <h3 class="favorite__item-title">
         {{strIngredient}}
     </h3>
-    <p class="ingredient__item-descript">
+    <p class="favorite__item-descript">
         {{strType}}
     </p>
-    <div class="ingredient__item-button-wrapper">
-        <button class="ingredient__item-button" type="button" data-modal-ingredients data-id="{{idIngredient}}">Learn
+    <div class="favorite__item-button-wrapper">
+        <button class="favorite__item-button" type="button" data-modal-ingredients-open data-id="{{strIngredient}}">Learn
             more</button>
-        <button class="ingredient__item-button" type="button" data-add-new-ingredient data-id="{{idIngredient}}">
+        <button class="favorite__item-button" type="button" data-add-new-ingredient data-id="{{idIngredient}}">
             <span>Add to</span>
             <svg class="icon icon-heart-stroked" width="21" height="19" viewBox="0 0 35 32">
                 <path style="fill: var(--color1, #fd5103)"

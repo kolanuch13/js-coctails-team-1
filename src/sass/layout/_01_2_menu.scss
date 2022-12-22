@@ -32,10 +32,12 @@
     &__toggle {
         cursor: pointer;
         display: inline-block;
+        position: absolute;
         width: 40px;
         top: 3px;
         left: 50%;
         height: 16px;
+        transform: translateX(-50%);
         background-color: FFFFFF;
         z-index: 2;
         box-shadow: 4px 7px 10px rgba(105, 105, 105, 0.15);
@@ -47,7 +49,6 @@
             display: inline-block;
             position: relative;
             z-index: 1;
-            top: 1px;
             left: 2px;
             width: 12px;
             height: 12px;
@@ -164,26 +165,26 @@
         position: relative;
         display: block;
         color: var(--text-color);
-
+        
         .mobile__icon-arrow {
             position: absolute;
             display: block;
             font-size: 0.7em;
             top: 14px;
             right: 10px;
-
+            
             &:before {
                 content: '\25BC';
             }
         }
-
+        
         &-menu {
             max-height: 0;
             overflow: hidden;
             border: 1px solid var(--accent-grapefruit);
             border-radius: 4px;
         }
-
+        
         li {
             font-family: 'Poppins';
             font-style: normal;

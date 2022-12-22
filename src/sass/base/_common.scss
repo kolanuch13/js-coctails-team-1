@@ -39,6 +39,7 @@ html {
 }
 
 body {
+  min-height: 100vw;
     font-family: var(--basic-font);
     font-size: var(--basic-font-size);
     color: var(--text-color);
