@@ -1,4 +1,4 @@
-export default modalIngredients = () => {
+export default modalIngredients = (() => {
   const refs = {
     bottomBtn: document.querySelectorAll('.modal-ingredients__bottom-btn'),
     closeModalIngrBtn: document.querySelectorAll(
@@ -51,4 +51,4 @@ export default modalIngredients = () => {
       }
     })
   });
-};
+});
