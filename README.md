@@ -1,0 +1,1 @@
+Page for searching cocktails and ingredients.

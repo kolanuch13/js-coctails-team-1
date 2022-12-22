@@ -1,0 +1,51 @@
+<div class="menu" data-menu>
+    <div class="container menu__container">
+        <button type="button" class="menu__button-close" data-menu-close>
+            <svg class="menu__button-close-svg">
+                <use class="menu__button-close-icon" href="./images/sprite.svg#icon-clarity_close-line"></use>
+            </svg>
+        </button>
+        <!-- toggle -->
+        <div class="menu__toggleWrapper">
+            <p class="Light">Light</p>
+            <label for="dn" class="menu__toggle">
+                <span class="menu__toggle--handler"></span>
+            </label>
+            <p class="Dark">Dark</p>
+        </div>
+        <!-- search -->
+        <div class="menu__search-container">
+            <form class="menu__search-form" id="search-form">
+                <button type="submit" class="menu__search-button" id="search-button">
+                    <span class="material-icons">
+                        <svg class="menu__search-magni-glass" width="24" height="24">
+                            <use xlink:href="./images/sprite.svg#icon-search"></use>
+                        </svg>
+                    </span>
+                </button>
+                <input class="menu__search-input" id="search-input" type="text" name="searchQuery" autocomplete="off" placeholder=" Search" />
+            </form>
+        </div>
+        <!-- nav -->
+        <nav class="menu__nav">
+            <ul class="menu__list list">
+                <li>
+                    <a href="./index.html" class="menu__nav-link link">Home</a>
+                </li>
+                <li>
+                    <div class="menu__dropdown">
+                        <a href="#" class="mobile-dropdown-button menu__nav-link link">Favorite
+                            <svg class="menu__icon-arrow" width="24" height="24">
+                                <use class="menu__icon-arrow-swg" href="./images/sprite.svg#icon-arrow-down"></use>
+                            </svg>
+                        </a>
+                        <ul class="mobile-dropdown-menu is-hidden">
+                            <li><a href="#" id="go-to-cocktails">Favorite cocktails</a></li>
+                            <li><a href="#" id="go-to-ingredients">Favorite ingredients</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
