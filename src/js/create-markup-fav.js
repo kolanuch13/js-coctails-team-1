@@ -62,7 +62,7 @@ function openFavIngredients (event){
       });
     })
   } else {
-    refs.list.innerHTML = `<span  class="favorite__error">You haven't added any favorite cocktails yet</span>`
+    refs.list.innerHTML = `<span  class="favorite__error">You haven't added any favorite ingredients yet</span>`
   }
 }
 
