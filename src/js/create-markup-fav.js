@@ -2,8 +2,8 @@ import { fetchById, fetchIngredientsId } from './fetch-cocktails.js';
 import templateFunctionCocktails from '../templates/card.hbs';
 import templateFunctionIngredients from '../templates/card-ingredient.hbs';
 import {modalIngredients} from './modal-ingredients.js';
-import modalCocktails from './modal-cocktails.js';
-import modalCards from './modal-cards.js';
+import {modalCocktails} from './modal-cocktails.js';
+import {modalCards} from './modal-cards.js';
 
 const refs = {
   // FAVORITES
