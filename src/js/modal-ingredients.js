@@ -1,4 +1,4 @@
-export default modalIngredients = (() => {
+export const modalIngredients = (() => {
   const refs = {
     bottomBtn: document.querySelectorAll('.modal-ingredients__bottom-btn'),
     closeModalIngrBtn: document.querySelectorAll(
