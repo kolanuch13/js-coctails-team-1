@@ -1,6 +1,6 @@
 import { fetchCocktails, fetchLetters, fetchRandom } from './fetch-cocktails.js';
 import templateFunction from '../templates/card.hbs';
-import modalIngredients from './modal-ingredients.js';
+import {modalIngredients} from './modal-ingredients.js';
 import modalCocktails from './modal-cocktails.js';
 import modalCards from './modal-cards.js';
 
