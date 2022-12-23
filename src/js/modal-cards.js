@@ -1,8 +1,8 @@
 import { fetchById } from './fetch-cocktails.js';
 import templateFunction from '../templates/modal-cocktails.hbs';
-import modalCocktails from './modal-cocktails.js';
+import {modalCocktails} from './modal-cocktails.js';
 
-export default modalCards = () => {
+export const modalCards = () => {
     const refs = {
         openModalBtn: document.querySelectorAll('[data-modal-win-open]'),
         closeModalBtn: document.querySelectorAll('.js-modal-close'),

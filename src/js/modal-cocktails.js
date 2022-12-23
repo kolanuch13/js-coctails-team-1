@@ -2,7 +2,7 @@ import { fetchIngredients } from './fetch-cocktails.js';
 import templateFunction from '../templates/modal-ingredients.hbs';
 import {modalIngredients} from './modal-ingredients.js';
 
-export default modalCocktails = () => {
+export const modalCocktails = () => {
   const refs = {
     closeModalBtn: document.querySelectorAll('[data-modal-win-close]'),
     backdrop: document.querySelector('[data-modal-win]'),
